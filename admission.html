@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto&family=Space+Grotesk:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            /* font-family: "Roboto"; */
+            font-size: 14px;
+            font-family: 'Roboto', sans-serif;
+
+        }
+        .container {
+            border: 2px solid #1b17f0;
+            display: block;
+            width: 50%;
+            display: block;
+            margin: 100px auto;
+            background: transparent;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            justify-content: center;
+            align-items: center;
+            background-color: #dcdcf1;
+        }
+
+        .inputbox {
+            position: relative;
+            margin: 30px 20px;
+            width: 310px;
+            border: none;
+            border-bottom: 2px solid #0b0b0b;
+        }
+
+        .inputbox label {
+            position: absolute;
+            top: 60%;
+            left: 5px;
+            transform: translateY(-50%);
+            color: #5855f0;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: 0.5s;
+            pointer-events: none;
+            display: none;
+        }
+
+        .inputbox input:focus~label {
+            top: -5px;
+        }
+
+        .inputbox input:valid~label {
+            top: -5px;
+        }
+
+        .inputbox input:empty~label {
+            display: block;
+        }
+
+        .inputbox input {
+            border: none;
+            width: 100%;
+            height: 50px;
+            background: transparent;
+            outline: none;
+            font-size: 1em;
+            padding: 0px 35px 0 5px;
+
+        }
+
+        div {
+            margin: 20px;
+        }
+
+        h4 {
+            display: inline-block;
+            color: #5855f0;
+            
+        }
+
+        .btn {
+            background-color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: aliceblue;
+            text-decoration: none;
+            font-size: 15px;
+            border: 2px solid rgb(27, 25, 25);
+            padding: 0px 14px;
+            border-radius: 10px;
+            height: 34px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <img src="http://college4u.in/wp-content/uploads/2019/07/1200px-Vellore_Institute_of_Technology_seal_2017.svg_-830x876.png"
+                alt="Nt Found">
+            <div>VIT</div>
+        </div>
+        <div class="mid">
+            <a href="home.html">VIT</a>
+            <a href="academics.html">Academics</a>
+            <a href="#" class="active">Admission</a>
+            <a href="gallary.html">Gallary</a>
+        </div>
+        <div class="right">
+            <button class="btn">Call Us</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+    <div class="vit_name">
+        <h1 style="text-align: center;">VIT A Place to Learn, Chance to Grow</h1>
+    </div>
+    <div>
+        <p class="text" style=" font-weight: bold; text-align: center;">
+            Vellore Institute of Technology (VIT) is a private research deemed university located in Katpadi
+            in Vellore, Tamil Nadu, India.
+        </p>
+    </div>
+    <div class="container">
+        <h2 style="text-align: center;">Get Admission to the best University in INDIA</h2>
+
+        <form action="/action_page.php">
+            <div class="inputbox">
+                <input type="text" required>
+                <label for="">First Name</label>
+            </div>
+            <div class="inputbox">
+                <input type="text" required>
+                <label for="">Last Name</label>
+            </div>
+            <div>
+                <h4>Gender: </h4>
+                <input type="radio" name="gender" id="male"><label>Male</label>
+                <input type="radio" name="gender" id="female"><label>Female</label>
+            </div>
+            <div class="">
+                <h4>Date of Birth:</h4>
+                <input type="datetime-local" name="" id="dob" min="1979-12-31T23:59" max="2000-01-31T12:00"
+                    title="Age must between 15-35">
+            </div>
+            <div class="">
+                <h4>10<sup>th </sup> Standard: </h4>
+                <label for="percent">Percentage</label>
+                <input type="radio" name="10" id="10percent" onclick="per_show(10)">
+                <label for="cgpa">CGPA</label>
+                <input type="radio" name="10" id="10cgpa" onclick="cg_show(10)">
+                <div class="inputbox 10grade entry" id="10per" style="display:none;">
+                    <input type="number" name="10" min="0" max="100" step="0.1">
+                    <label for="">Enter your percentage</label>
+                </div>
+                <div class="inputbox 10grade entry" id="10cg" style="display:none;">
+                    <input type="number" name="10" min="0" max="10" step="0.01">
+                    <label for="">Enter your CGPA</label>
+                </div>
+            </div>
+            <div class="">
+                <h4>12<sup>th </sup>Standard:</h4>
+                <label for="percent">Percentage</label>
+                <input type="radio" name="12" id="12percent" onclick="per_show(12)">
+                <label for="cgpa">CGPA</label>
+                <input type="radio" name="12" id="12cgpa" onclick="cg_show(12)">
+                <div class="inputbox 12grade entry" id="12per" style="display:none;">
+                    <input type="number" name="12" min="0" max="100" step="0.1">
+                    <label for="">Enter your percentage</label>
+                </div>
+                <div class="inputbox 12grade entry" id="12cg" style="display:none;">
+                    <input type="number" name="12" min="0" max="10" step="0.01">
+                    <label for="">Enter your CGPA</label>
+                </div>
+            </div>
+            <script>
+                function per_show(number) {
+                    const values = document.getElementsByClassName(number + "grade");
+                    for (let i = 0; i < values.length; i++) {
+                        values[i].style.display = "none";
+                    }
+                    const selected = document.getElementById(number + "per");
+                    selected.style.display = "block";
+                }
+                function cg_show(number) {
+                    const values = document.getElementsByClassName(number + "grade");
+                    for (let i = 0; i < values.length; i++) {
+                        values[i].style.display = "none";
+                    }
+                    const selected = document.getElementById(number + "cg");
+                    selected.style.display = "block";
+                }
+            </script>
+            <div>
+                <h4>Course Presference:</h4><br>
+                <input type="radio" name="cf" id="bt"><label for="bt">B.Tech</label><br>
+                <input type="radio" name="cf" id="bb"><label for="bb">BBA</label><br>
+                <input type="radio" name="cf" id="bs"><label for="bs">B.Sc</label><br>
+                <input type="radio" name="cf" id="im"><label for="im">Int M.Tech</label><br>
+                <input type="radio" name="cf" id="no"><label for="no">None</label>
+            </div>
+            <div>
+                <h4>Hobbies:</h4><br>
+                <input type="checkbox" id="st"><label for="st">Studies</label><br>
+                <input type="checkbox" id="cr"><label for="cr">Cricket</label><br>
+                <input type="checkbox" id="fb"><label for="fb">Football</label><br>
+                <input type="checkbox" id="sl"><label for="sl">sleeping</label><br>
+            </div>
+            <div class="form rating">
+                <h4><label for="Rating">Rate this Website: </label></h4>
+                <select name="myRating" id="rating">
+                    <option value="1star">*</option>
+                    <option value="2star">**</option>
+                    <option value="3star">***</option>
+                    <option value="4star">****</option>
+                    <option value="5star" selected>*****</option>
+                </select>
+            </div>
+            <div class="inputbox">
+                <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                <label for="">Email:</label>
+            </div>
+            <div class="inputbox">
+                <input type="url" required>
+                <label for="">Enter your URL</label>
+            </div>
+            <input type="submit" class="btn" style="margin: 20px 40px;">
+            <a href="https://www.google.co.in/" target="_blank"><img
+                    src="https://tse3.mm.bing.net/th?id=OIP.yL98CHypeT0JQEKEVwf_rAHaHa&pid=Api&P=0&h=180" alt="google"
+                    width="30px" height="30px"></a>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div>
+            <img src="https://tse2.mm.bing.net/th?id=OIP.qE3RTbwfxXDZV0g-H8wOxgAAAA&pid=Api&P=0&h=180" alt="vitphoto"
+                style="display: inline-block;">
+        </div>
+        <div>
+            <div class="footer-info">
+                <h3>Contact Information</h3>
+                <p>Email: info@vit.edu</p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Address: VIT University, Vellore, Tamilnadu -632014</p>
+            </div>
+            <div class="footer-social">
+                <h3>Connect with Us</h3>
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div style="font-size: 14px; margin-top: 20px;">
+            &copy; VIT 2023. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+
+</html>

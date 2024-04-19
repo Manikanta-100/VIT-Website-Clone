@@ -1,0 +1,26 @@
+.footer {
+    background-color: rgb(53, 53, 135);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer div {
+    display: inline-block;
+    margin: 10px;
+}
+
+.footer-info h3,
+.footer-social h3 {
+    font-size: 18px;
+}
+
+.footer p {
+    margin: 5px 0;
+    color: white;
+}
+
+.footer img {
+    margin: 5px;
+    filter: brightness(70%);
+}

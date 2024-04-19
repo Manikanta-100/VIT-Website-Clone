@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto&family=Space+Grotesk:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            /* font-family: "Roboto"; */
+            font-size: 14px;
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        /* Additional CSS for Gallery page */
+        .gallery-container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .gallery-container h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .image-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image-list-item {
+            width: calc(33.33% - 25px);
+            margin: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+            position: relative;
+        }
+
+        .image-list-item:hover {
+            transform: scale(1.05);
+        }
+
+        .image-list-item img {
+            max-width: 100%;
+            height: 100%;
+            display: block;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .image-list-item:hover img {
+            transform: scale(1.2);
+        }
+
+        .image-list-item::before {
+            content: "";
+            display: block;
+            /* padding-top: 75%; */
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .image-list-item:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .image-overlay h2 {
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <img src="http://college4u.in/wp-content/uploads/2019/07/1200px-Vellore_Institute_of_Technology_seal_2017.svg_-830x876.png"
+                alt="Nt Found">
+            <div>VIT</div>
+        </div>
+        <div class="mid">
+            <a href="home.html">VIT</a>
+            <a href="academics.html">Academics</a>
+            <a href="admission.html">Admission</a>
+            <a href="#" class="active">Gallary</a>
+        </div>
+        <div class="right">
+            <button class="btn">Call Us</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="gallery-container">
+            <h1>College Gallery</h1>
+            <ul class="image-list">
+                <li class="image-list-item">
+                    <img src="https://images.shiksha.com/mediadata/images/articles/1656187006phpmZp2II.jpeg"
+                        alt="Image 1">
+                </li>
+                <li class="image-list-item">
+                    <img src="https://media.getmyuni.com/assets/images/articles/vit-vellore-alumni.webp" alt="Image 2">
+                </li>
+                <li class="image-list-item">
+                    <img src="https://pbs.twimg.com/media/EQuySxfVUAAqY1Q.jpg" alt="Image 3">
+                </li>
+                <li class="image-list-item">
+                    <img src="https://vit.ac.in/sites/default/files/styles/infrastructure/public/main_building.jpg?itok=xNdzBYUE"
+                        alt="Image 4">
+                </li>
+                <li class="image-list-item">
+                    <img src="https://vit.ac.in/sites/default/files/images/news/Distinguished%20Alumni%20Awards%20presented%20at%20VIT.jpg"
+                        alt="Image 5">
+                </li>
+                <li class="image-list-item">
+                    <img src="https://qph.cf2.quoracdn.net/main-qimg-a67ba6ed1f6949ab8d6d5f7c36df6765-lq" alt="Image 6">
+                </li>
+                <li class="image-list-item">
+                    <img src="https://vit.ac.in/sites/default/files/004A4107.jpg" alt="Image 7">
+                </li>
+                <li class="image-list-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-OOnNhnzb-7HSiW7r0aYiAmmoNXn418yviw&usqp=CAU"
+                        alt="Image 8">
+                </li>
+                <li class="image-list-item">
+                    <img src="https://images.collegedunia.com/public/college_data/images/campusimage/1677908116333218737_1325231918039316_4151516407401851061_n.jpg"
+                        alt="Image 9">
+                </li>
+                <li class="image-list-item">
+                    <img src="https://vit.ac.in/system/files/Ambulence%20Facility1.JPG" alt="Image 10">
+                </li>
+                <li class="image-list-item">
+                    <img src="https://qph.cf2.quoracdn.net/main-qimg-9f0309cc51c8cbe692cf193153093b65-lq"
+                        alt="Image 11">
+                </li>
+                <li class="image-list-item">
+                    <img src="https://media.getmyuni.com/azure/college-images-test/vit-university-vit-vellore/d19dc46f492140afbd9697c75ba67599.jpeg"
+                        alt="Image 12">
+                </li>
+            </ul>
+            <p style="text-align: center; font-size: 20px; font-weight: bold;">.....and Many More</p>
+            <p style="text-align: center; font-size: 20px; font-weight: bold;">Come....Join with us in this Fabolous
+                Journey</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <img src="https://tse2.mm.bing.net/th?id=OIP.qE3RTbwfxXDZV0g-H8wOxgAAAA&pid=Api&P=0&h=180" alt="vitphoto"
+                style="display: inline-block;">
+        </div>
+        <div>
+            <div class="footer-info">
+                <h3>Contact Information</h3>
+                <p>Email: info@vit.edu</p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Address: VIT University, Vellore, Tamilnadu -632014</p>
+            </div>
+            <div class="footer-social">
+                <h3>Connect with Us</h3>
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div style="font-size: 14px; margin-top: 20px;">
+            &copy; VIT 2023. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+
+</html>
